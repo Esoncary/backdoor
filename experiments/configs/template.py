@@ -55,9 +55,12 @@ def get_config():
     config.attention_weight_dict = {
         'goal': 0.0,
         'sys_role': 0.0,
+        'trigger': -1.0,
         'control': -1.0
     }
     
     config.test_case_path = ''
+
+    config.trigger = "I watched 3D movies"
 
     return config

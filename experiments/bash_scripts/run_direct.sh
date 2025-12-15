@@ -1,6 +1,7 @@
 export model=$1
 export attack=$2
 export offset=$3
+export dataset=$4
 export folder=../bash_scripts/out_${model}_${attack}_direct # 打印文件
 
 cd ../testcase
@@ -21,6 +22,7 @@ else
     echo "Folder $folder already exists."
 fi
 
-bash run_individual.sh $model $attack direct 8 $offset > ${folder}/${offset}.out &
+bash run_individual.sh $model $attack direct 8 $dataset $offset > ${folder}/${offset}1.out &
+# nohup bash run_individual.sh $model $attack direct 8 $offset > ${folder}/${offset}.out &
 
 wait

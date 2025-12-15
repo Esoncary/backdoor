@@ -13,7 +13,7 @@ from AttnGCG import AttackPrompt, MultiPromptAttack, PromptManager
 from AttnGCG import get_embedding_matrix, get_embeddings
 
 
-def token_gradients(model, input_ids, input_slice, target_slice, loss_slice, goal_slice, 
+def token_gradients(model, input_ids, input_slice, target_slice, loss_slice, goal_slice, trigger_slice, # 【新增】接收 trigger_slice
                     control_slice, sys_prompt_slice, assistant_role_slice,
                     target_weight, attention_pooling_method, attention_weight, attention_weight_dict):
     
@@ -50,6 +50,7 @@ def token_gradients(model, input_ids, input_slice, target_slice, loss_slice, goa
     attentions = x.attentions[-1]
     slice_dict = {
         'goal': goal_slice,
+        'trigger': trigger_slice, # 【新增】
         'sys_role': sys_prompt_slice,
         'control': control_slice,
     }
@@ -97,6 +98,7 @@ class AttnGCGAttackPrompt(AttackPrompt):
                 self._target_slice, 
                 self._loss_slice,
                 self._goal_slice,
+                self._trigger_slice, # 【新增】传入 trigger_slice
                 self._control_slice,
                 self._sys_prompt_slice,
                 self._assistant_role_slice,
