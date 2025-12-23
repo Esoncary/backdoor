@@ -21,8 +21,8 @@ if [ ! -d $folder ]; then
 else
     echo "Folder $folder already exists."
 fi
-
-bash run_individual.sh $model $attack direct 8 $dataset $offset > ${folder}/${offset}1.out &
+time=$(date +"%Y%m%d_%H%M%S")
+bash run_individual.sh $model $attack direct 8 $dataset $offset > ${folder}/${offset}_${time}.out &
 # nohup bash run_individual.sh $model $attack direct 8 $offset > ${folder}/${offset}.out &
 
 wait
