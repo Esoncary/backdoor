@@ -1,0 +1,57 @@
+Folder ../results_individual_direct_attngcg_gemma_2b already exists.
+allow_non_ascii: false
+anneal: false
+attack: attngcg
+attention_pooling_method: mean
+attention_weight: 50.0
+attention_weight_dict:
+  control: 0.0
+  goal: 0.0
+  sys_role: 0.0
+  trigger: -1.0
+batch_size: 64
+control_init: '! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !'
+control_weight: 0.0
+conversation_templates:
+- gemma
+data_offset: 0
+devices:
+- cuda:0
+enable_prefix_sharing: true
+filter_cand: true
+incr_control: false
+model: gemma_2b
+model_kwargs:
+- low_cpu_mem_usage: true
+  use_cache: false
+  use_flash_attention_2: false
+model_paths:
+- /home/dataset/2024_zox_llm/code/AttnGCG-attack/model/AI-ModelScope/gemma-2b-it
+n_steps: 500
+n_test_data: 1821
+n_train_data: 8
+num_train_models: 1
+progressive_goals: false
+progressive_models: false
+result_prefix: ../results_individual_direct_attngcg_gemma_2b/individual_direct_gemma_2b_sst_offset0
+setup: ''
+stop_on_success: false
+target_weight: 1.0
+temp: 1
+test_case_path: ../testcase/gemma_2b_attngcg_direct.json
+test_data: ../../data/backdoor/sst/test.csv
+test_steps: 20
+tokenizer_kwargs:
+- {}
+tokenizer_paths:
+- /home/dataset/2024_zox_llm/code/AttnGCG-attack/model/AI-ModelScope/gemma-2b-it
+topk: 128
+train_data: ../../data/backdoor/sst/train.csv
+transfer: false
+trigger: I watched 3D movies
+verbose: true
+
+Loaded 8 train goals
+Loaded 0 test goals
+Loaded 1 tokenizers
+Loaded 1 conversation templates

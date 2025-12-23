@@ -56,7 +56,7 @@ def get_config():
         'goal': 0.0,
         'sys_role': 0.0,
         'trigger': -1.0,
-        'control': -1.0
+        'control': 0.0
     }
     
     config.test_case_path = ''

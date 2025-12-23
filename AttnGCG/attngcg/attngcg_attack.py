@@ -174,6 +174,7 @@ class AttnGCGMultiPromptAttack(MultiPromptAttack):
         else:
             loss_config = None
         main_device = self.models[0].device
+        # main_device = torch.device('cpu')
         control_candses = []
         losses = []
         modes = ["control"]
@@ -268,7 +269,6 @@ class AttnGCGMultiPromptAttack(MultiPromptAttack):
                     
                     index = loss[j * batch_size:(j + 1) * batch_size].argmin()
                     print(f'choose: {index}')
-                        
             losses.append(loss)
             
         min_loss = torch.tensor([loss.min() for loss in losses])
