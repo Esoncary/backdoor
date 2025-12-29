@@ -1,0 +1,605 @@
+Folder ../results_individual_direct_attngcg_gemma_2b already exists.
+allow_non_ascii: false
+anneal: false
+attack: attngcg
+attention_pooling_method: mean
+attention_weight: 50.0
+attention_weight_dict:
+  control: 0.0
+  goal: 0.0
+  sys_role: 0.0
+  trigger: -1.0
+batch_size: 32
+control_init: '! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !'
+control_weight: 0.0
+conversation_templates:
+- gemma
+data_offset: 0
+devices:
+- cuda:0
+enable_prefix_sharing: true
+filter_cand: true
+incr_control: false
+model: gemma_2b
+model_kwargs:
+- low_cpu_mem_usage: true
+  use_cache: false
+  use_flash_attention_2: false
+model_paths:
+- /home/dataset/2024_zox_llm/code/AttnGCG/model/AI-ModelScope/gemma-2b-it
+n_steps: 500
+n_test_data: 1821
+n_train_data: 4
+num_train_models: 1
+progressive_goals: false
+progressive_models: false
+result_prefix: ../results_individual_direct_attngcg_gemma_2b/individual_direct_gemma_2b_sst_offset0
+setup: ''
+stop_on_success: false
+target_weight: 1.0
+temp: 1
+test_case_path: ../testcase/gemma_2b_attngcg_direct.json
+test_data: ../../data/backdoor/sst/test.csv
+test_steps: 20
+tokenizer_kwargs:
+- {}
+tokenizer_paths:
+- /home/dataset/2024_zox_llm/code/AttnGCG/model/AI-ModelScope/gemma-2b-it
+topk: 128
+train_data: ../../data/backdoor/sst/train.csv
+transfer: false
+trigger: I watched 3D movies
+verbose: true
+
+Loaded 4 train goals
+Loaded 909 ASR_test_goals
+Loaded 1821 CA_test_goals
+Loaded 1 tokenizers
+Loaded 1 conversation templates
+torch.float16
+False
+Loaded 1 train models
+Loaded 0 test models
+Goal 1/4
+gen_str: The statement is not correct.
+[DEBUG Attn] goal(min=0.0067, mean=0.0067) | sys_role(min=0.2278, mean=0.2278) | control(min=0.0040, mean=0.0040) | trigger(min=0.0034, mean=0.0034)
+target_loss: 0, 16.296875
+attention_loss: 0, -0.0033588409423828125
+
+====================================================
+Step    0/ 500 (0.0 s)
+(id_id) | Passed   1/1   | EM   0/1   | Loss 16.2969
+control=' ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !'
+====================================================
+
+[DEBUG Attn] goal(min=0.0064, mean=0.0066) | sys_role(min=0.2249, mean=0.2355) | control(min=0.0037, mean=0.0043) | trigger(min=0.0033, mean=0.0035)
+target_loss_min: 26, 16.203125
+attention_loss_min: 6, -0.0037517547607421875
+choose: 26
+Current control length: 20
+next_control:  ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !<mask> ! ! !
+Current Loss: 8099.82861328125 Best Loss: 8099.82861328125
+[DEBUG Attn] goal(min=0.0059, mean=0.0065) | sys_role(min=0.2203, mean=0.2337) | control(min=0.0041, mean=0.0048) | trigger(min=0.0030, mean=0.0032)
+target_loss_min: 28, 15.59375
+attention_loss_min: 23, -0.003360748291015625
+choose: 28
+Current control length: 21
+next_control:   ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !<mask> Supp ! !
+Current Loss: 3897.840087890625 Best Loss: 3897.840087890625
+[DEBUG Attn] goal(min=0.0062, mean=0.0066) | sys_role(min=0.2224, mean=0.2288) | control(min=0.0046, mean=0.0054) | trigger(min=0.0029, mean=0.0031)
+target_loss_min: 20, 14.7265625
+attention_loss_min: 24, -0.0033321380615234375
+choose: 20
+Current control length: 21
+next_control:    ! ! ! ! ! ! ! ! ! ! ! ! ! Ottobre ! !<mask> Supp ! !
+Current Loss: 2453.853271484375 Best Loss: 2453.853271484375
+[DEBUG Attn] goal(min=0.0050, mean=0.0062) | sys_role(min=0.2135, mean=0.2320) | control(min=0.0046, mean=0.0053) | trigger(min=0.0023, mean=0.0029)
+target_loss_min: 26, 12.453125
+attention_loss_min: 16, -0.003116607666015625
+choose: 26
+Current control length: 21
+next_control:     ! ! ! ! ! ! ! ! ! ! ! ! ! Ottobre ! !<mask> Neg ! !
+Current Loss: 1556.8582763671875 Best Loss: 1556.8582763671875
+[DEBUG Attn] goal(min=0.0047, mean=0.0058) | sys_role(min=0.1985, mean=0.2121) | control(min=0.0050, mean=0.0062) | trigger(min=0.0024, mean=0.0028)
+target_loss_min: 15, 11.6171875
+attention_loss_min: 20, -0.003070831298828125
+choose: 15
+Current control length: 21
+next_control:      ! ! ! ! ! ! ! ! ! ! rispond ! ! Ottobre ! !<mask> Neg ! !
+Current Loss: 1161.8565673828125 Best Loss: 1161.8565673828125
+[DEBUG Attn] goal(min=0.0044, mean=0.0057) | sys_role(min=0.1964, mean=0.2070) | control(min=0.0053, mean=0.0065) | trigger(min=0.0023, mean=0.0028)
+target_loss_min: 27, 9.515625
+attention_loss_min: 26, -0.0030422210693359375
+choose: 27
+Current control length: 21
+next_control:       ! ! ! ! ! ! ! ! ! ! rispond ! ! Ottobre ! !<mask> Negptic !
+Current Loss: 792.8741455078125 Best Loss: 792.8741455078125
+[DEBUG Attn] goal(min=0.0047, mean=0.0055) | sys_role(min=0.1891, mean=0.2039) | control(min=0.0054, mean=0.0071) | trigger(min=0.0022, mean=0.0025)
+target_loss_min: 28, 7.671875
+attention_loss_min: 26, -0.00287628173828125
+choose: 28
+Current control length: 21
+next_control:        ! ! ! ! ! ! ! ! ! ! rispond ! ! Ottobre ! !<mask> Negptic U
+Current Loss: 547.8811645507812 Best Loss: 547.8811645507812
+[DEBUG Attn] goal(min=0.0035, mean=0.0046) | sys_role(min=0.2104, mean=0.2225) | control(min=0.0056, mean=0.0068) | trigger(min=0.0020, mean=0.0023)
+target_loss_min: 23, 7.296875
+attention_loss_min: 26, -0.002750396728515625
+choose: 23
+Current control length: 21
+next_control:         ! ! ! ! ! ! ! ! ! ! rispond ! ! Ottobre !)$\\<mask> Negptic U
+Current Loss: 455.8898620605469 Best Loss: 455.8898620605469
+[DEBUG Attn] goal(min=0.0036, mean=0.0043) | sys_role(min=0.1934, mean=0.2109) | control(min=0.0068, mean=0.0081) | trigger(min=0.0020, mean=0.0022)
+target_loss_min: 17, 4.4453125
+attention_loss_min: 27, -0.0026035308837890625
+choose: 17
+Current control length: 21
+next_control:          ! ! ! ! ! ! ! ! ! ! rispond response ! Ottobre !)$\\<mask> Negptic U
+Current Loss: 246.89556884765625 Best Loss: 246.89556884765625
+[DEBUG Attn] goal(min=0.0033, mean=0.0038) | sys_role(min=0.1936, mean=0.2046) | control(min=0.0072, mean=0.0087) | trigger(min=0.0019, mean=0.0021)
+target_loss_min: 12, 4.02734375
+attention_loss_min: 9, -0.0026531219482421875
+choose: 12
+Current control length: 21
+next_control:           ! ! ! ! ! !)\}$ ! ! ! rispond response ! Ottobre !)$\\<mask> Negptic U
+Current Loss: 201.27523803710938 Best Loss: 201.27523803710938
+[DEBUG Attn] goal(min=0.0028, mean=0.0037) | sys_role(min=0.1960, mean=0.2095) | control(min=0.0070, mean=0.0086) | trigger(min=0.0015, mean=0.0020)
+target_loss_min: 28, 1.978515625
+attention_loss_min: 10, -0.0024127960205078125
+choose: 28
+Current control length: 21
+next_control:            ! ! ! ! ! !)\}$ ! ! ! rispond response ! Ottobre !)$\\<mask> Negatyw U
+Current Loss: 89.83793640136719 Best Loss: 89.83793640136719
+[DEBUG Attn] goal(min=0.0030, mean=0.0034) | sys_role(min=0.1940, mean=0.2138) | control(min=0.0071, mean=0.0085) | trigger(min=0.0015, mean=0.0020)
+target_loss_min: 12, 1.8544921875
+attention_loss_min: 26, -0.0023708343505859375
+choose: 12
+Current control length: 21
+next_control:             ! ! ! ! ! !)\}$ serai ! ! rispond response ! Ottobre !)$\\<mask> Negatyw U
+Current Loss: 77.15806579589844 Best Loss: 77.15806579589844
+[DEBUG Attn] goal(min=0.0027, mean=0.0031) | sys_role(min=0.1737, mean=0.2092) | control(min=0.0083, mean=0.0093) | trigger(min=0.0016, mean=0.0018)
+target_loss_min: 15, 1.3935546875
+attention_loss_min: 28, -0.002086639404296875
+choose: 15
+Current control length: 21
+next_control:              ! ! ! ! ! !)\}$ serai !?). rispond response ! Ottobre !)$\\<mask> Negatyw U
+Current Loss: 53.50505828857422 Best Loss: 53.50505828857422
+[DEBUG Attn] goal(min=0.0027, mean=0.0031) | sys_role(min=0.1794, mean=0.2067) | control(min=0.0082, mean=0.0095) | trigger(min=0.0015, mean=0.0018)
+target_loss_min: 0, 1.126953125
+attention_loss_min: 10, -0.00206756591796875
+choose: 0
+Current control length: 21
+next_control:  Art! ! ! ! ! !)\}$ serai !?). rispond response ! Ottobre !)$\\<mask> Negatyw U
+Current Loss: 40.15696716308594 Best Loss: 40.15696716308594
+[DEBUG Attn] goal(min=0.0028, mean=0.0032) | sys_role(min=0.1953, mean=0.2127) | control(min=0.0069, mean=0.0087) | trigger(min=0.0016, mean=0.0018)
+target_loss_min: 29, 0.64892578125
+attention_loss_min: 29, -0.002117156982421875
+choose: 29
+Current control length: 22
+next_control:   Art! ! ! ! ! !)\}$ serai !?). rispond response ! Ottobre !)$\\<mask> Negatyw contemporanea
+Current Loss: 21.519142150878906 Best Loss: 21.519142150878906
+[DEBUG Attn] goal(min=0.0030, mean=0.0039) | sys_role(min=0.1782, mean=0.2083) | control(min=0.0068, mean=0.0089) | trigger(min=0.0017, mean=0.0022)
+target_loss_min: 5, 0.6318359375
+attention_loss_min: 13, -0.0025787353515625
+choose: 5
+Current control length: 22
+next_control:    Art! Smokey ! ! ! !)\}$ serai !?). rispond response ! Ottobre !)$\\<mask> Negatyw contemporanea
+Current Loss: 19.64490509033203 Best Loss: 19.64490509033203
+[DEBUG Attn] goal(min=0.0031, mean=0.0039) | sys_role(min=0.1733, mean=0.2068) | control(min=0.0074, mean=0.0089) | trigger(min=0.0016, mean=0.0022)
+target_loss_min: 5, 0.609375
+attention_loss_min: 18, -0.0026645660400390625
+choose: 5
+Current control length: 22
+next_control:     Art! akum ! ! ! !)\}$ serai !?). rispond response ! Ottobre !)$\\<mask> Negatyw contemporanea
+Current Loss: 17.814109802246094 Best Loss: 17.814109802246094
+[DEBUG Attn] goal(min=0.0033, mean=0.0039) | sys_role(min=0.1868, mean=0.2043) | control(min=0.0076, mean=0.0092) | trigger(min=0.0017, mean=0.0022)
+target_loss_min: 12, 0.59130859375
+attention_loss_min: 16, -0.0025730133056640625
+choose: 12
+Current control length: 22
+next_control:      Art! akum ! ! ! ! =[ serai !?). rispond response ! Ottobre !)$\\<mask> Negatyw contemporanea
+Current Loss: 16.306289672851562 Best Loss: 16.306289672851562
+[DEBUG Attn] goal(min=0.0034, mean=0.0040) | sys_role(min=0.1866, mean=0.2045) | control(min=0.0078, mean=0.0094) | trigger(min=0.0018, mean=0.0023)
+target_loss_min: 11, 0.5380859375
+attention_loss_min: 17, -0.002567291259765625
+choose: 11
+Current control length: 22
+next_control:       Art! akum ! ! ! flowery =[ serai !?). rispond response ! Ottobre !)$\\<mask> Negatyw contemporanea
+Current Loss: 14.046195983886719 Best Loss: 14.046195983886719
+[DEBUG Attn] goal(min=0.0026, mean=0.0038) | sys_role(min=0.1746, mean=0.2070) | control(min=0.0076, mean=0.0091) | trigger(min=0.0017, mean=0.0021)
+target_loss_min: 1, 0.5498046875
+attention_loss_min: 15, -0.0024280548095703125
+choose: 1
+Current control length: 22
+next_control: boresArt! akum ! ! ! flowery =[ serai !?). rispond response ! Ottobre !)$\\<mask> Negatyw contemporanea
+Current Loss: 13.635662078857422 Best Loss: 13.635662078857422
+gen_str: Negative, I am not able
+[DEBUG Attn] goal(min=0.0038, mean=0.0038) | sys_role(min=0.2068, mean=0.2068) | control(min=0.0091, mean=0.0091) | trigger(min=0.0022, mean=0.0022)
+target_loss: 0, 0.57470703125
+attention_loss: 0, -0.0021610260009765625
+
+====================================================
+Step   20/ 500 (0.9175 s)
+(id_id) | Passed   1/1   | EM   1/1   | Loss 0.5747
+control=' boresArt! akum ! ! ! flowery =[ serai !?). rispond response ! Ottobre !)$\\<mask> Negatyw contemporanea'
+====================================================
+
+[DEBUG Attn] goal(min=0.0029, mean=0.0038) | sys_role(min=0.1942, mean=0.2065) | control(min=0.0074, mean=0.0090) | trigger(min=0.0015, mean=0.0021)
+target_loss_min: 2, 0.4990234375
+attention_loss_min: 11, -0.002361297607421875
+choose: 2
+Current control length: 23
+next_control:   bores boss! akum ! ! ! flowery =[ serai !?). rispond response ! Ottobre !)$\\<mask> Negatyw contemporanea
+Current Loss: 11.78048324584961 Best Loss: 11.78048324584961
+[DEBUG Attn] goal(min=0.0029, mean=0.0037) | sys_role(min=0.1892, mean=0.2026) | control(min=0.0081, mean=0.0094) | trigger(min=0.0017, mean=0.0020)
+target_loss_min: 10, 0.43603515625
+attention_loss_min: 19, -0.00246429443359375
+choose: 10
+Current control length: 23
+next_control:    bores boss! akum ! ! ambivalent flowery =[ serai !?). rispond response ! Ottobre !)$\\<mask> Negatyw contemporanea
+Current Loss: 9.79934310913086 Best Loss: 9.79934310913086
+[DEBUG Attn] goal(min=0.0030, mean=0.0037) | sys_role(min=0.1711, mean=0.1903) | control(min=0.0086, mean=0.0097) | trigger(min=0.0017, mean=0.0021)
+target_loss_min: 1, 0.48828125
+attention_loss_min: 4, -0.002307891845703125
+choose: 1
+Current control length: 23
+next_control:      scary boss! akum ! ! ambivalent flowery =[ serai !?). rispond response ! Ottobre !)$\\<mask> Negatyw contemporanea
+Current Loss: 10.503795623779297 Best Loss: 9.79934310913086
+[DEBUG Attn] goal(min=0.0035, mean=0.0039) | sys_role(min=0.1779, mean=0.1940) | control(min=0.0079, mean=0.0095) | trigger(min=0.0018, mean=0.0022)
+target_loss_min: 0, 0.466552734375
+attention_loss_min: 17, -0.00251007080078125
+choose: 0
+Current control length: 23
+next_control: armscary boss! akum ! ! ambivalent flowery =[ serai !?). rispond response ! Ottobre !)$\\<mask> Negatyw contemporanea
+Current Loss: 9.60898208618164 Best Loss: 9.60898208618164
+[DEBUG Attn] goal(min=0.0030, mean=0.0039) | sys_role(min=0.1837, mean=0.1972) | control(min=0.0077, mean=0.0092) | trigger(min=0.0017, mean=0.0022)
+target_loss_min: 12, 0.39453125
+attention_loss_min: 21, -0.002544403076171875
+choose: 12
+Current control length: 23
+next_control:  armscary boss! akum ! ! ambivalent Floral =[ serai !?). rispond response ! Ottobre !)$\\<mask> Negatyw contemporanea
+Current Loss: 7.776374816894531 Best Loss: 7.776374816894531
+[DEBUG Attn] goal(min=0.0028, mean=0.0037) | sys_role(min=0.1863, mean=0.2048) | control(min=0.0071, mean=0.0084) | trigger(min=0.0018, mean=0.0023)
+target_loss_min: 10, 0.34619140625
+attention_loss_min: 23, -0.0025730133056640625
+choose: 10
+Current control length: 24
+next_control:   armscary boss! akum ! renou ambivalent Floral =[ serai !?). rispond response ! Ottobre !)$\\<mask> Negatyw contemporanea
+Current Loss: 6.533321380615234 Best Loss: 6.533321380615234
+[DEBUG Attn] goal(min=0.0033, mean=0.0039) | sys_role(min=0.1912, mean=0.2073) | control(min=0.0064, mean=0.0081) | trigger(min=0.0020, mean=0.0024)
+target_loss_min: 15, 0.387451171875
+attention_loss_min: 23, -0.0028324127197265625
+choose: 15
+Current control length: 24
+next_control:    armscary boss! akum ! renou ambivalent Floral =[Bienvenue !?). rispond response ! Ottobre !)$\\<mask> Negatyw contemporanea
+Current Loss: 7.054664611816406 Best Loss: 6.533321380615234
+[DEBUG Attn] goal(min=0.0028, mean=0.0038) | sys_role(min=0.1846, mean=0.2040) | control(min=0.0063, mean=0.0080) | trigger(min=0.0015, mean=0.0023)
+target_loss_min: 18, 0.291748046875
+attention_loss_min: 17, -0.00283050537109375
+choose: 18
+Current control length: 24
+next_control:     armscary boss! akum ! renou ambivalent Floral =[Bienvenue !?). select response ! Ottobre !)$\\<mask> Negatyw contemporanea
+Current Loss: 5.100978851318359 Best Loss: 5.100978851318359
+[DEBUG Attn] goal(min=0.0034, mean=0.0038) | sys_role(min=0.1890, mean=0.2099) | control(min=0.0060, mean=0.0076) | trigger(min=0.0017, mean=0.0022)
+target_loss_min: 10, 0.2254638671875
+attention_loss_min: 18, -0.0028438568115234375
+choose: 10
+Current control length: 24
+next_control:      armscary boss! akum ! lavorato ambivalent Floral =[Bienvenue !?). select response ! Ottobre !)$\\<mask> Negatyw contemporanea
+Current Loss: 3.786773681640625 Best Loss: 3.786773681640625
+[DEBUG Attn] goal(min=0.0025, mean=0.0035) | sys_role(min=0.1990, mean=0.2154) | control(min=0.0061, mean=0.0074) | trigger(min=0.0015, mean=0.0020)
+target_loss_min: 4, 0.1859130859375
+attention_loss_min: 18, -0.002529144287109375
+choose: 4
+Current control length: 24
+next_control:       armscary croit! akum ! lavorato ambivalent Floral =[Bienvenue !?). select response ! Ottobre !)$\\<mask> Negatyw contemporanea
+Current Loss: 2.9956130981445312 Best Loss: 2.9956130981445312
+[DEBUG Attn] goal(min=0.0028, mean=0.0034) | sys_role(min=0.1932, mean=0.2127) | control(min=0.0066, mean=0.0078) | trigger(min=0.0014, mean=0.0020)
+target_loss_min: 24, 0.189208984375
+attention_loss_min: 16, -0.002429962158203125
+choose: 24
+Current control length: 24
+next_control:        armscary croit! akum ! lavorato ambivalent Floral =[Bienvenue !?). select response ! Ottobre !OOTD<mask> Negatyw contemporanea
+Current Loss: 2.9491195678710938 Best Loss: 2.9491195678710938
+[DEBUG Attn] goal(min=0.0028, mean=0.0033) | sys_role(min=0.1799, mean=0.2139) | control(min=0.0060, mean=0.0074) | trigger(min=0.0016, mean=0.0020)
+target_loss_min: 1, 0.1427001953125
+attention_loss_min: 19, -0.002468109130859375
+choose: 1
+Current control length: 24
+next_control:         BufferExceptioncary croit! akum ! lavorato ambivalent Floral =[Bienvenue !?). select response ! Ottobre !OOTD<mask> Negatyw contemporanea
+Current Loss: 2.1382484436035156 Best Loss: 2.1382484436035156
+[DEBUG Attn] goal(min=0.0024, mean=0.0032) | sys_role(min=0.1791, mean=0.2153) | control(min=0.0056, mean=0.0073) | trigger(min=0.0014, mean=0.0018)
+target_loss_min: 25, 0.105224609375
+attention_loss_min: 0, -0.002277374267578125
+choose: 25
+Current control length: 24
+next_control:          BufferExceptioncary croit! akum ! lavorato ambivalent Floral =[Bienvenue !?). select response ! Ottobre ! chrysler<mask> Negatyw contemporanea
+Current Loss: 1.5005512237548828 Best Loss: 1.5005512237548828
+[DEBUG Attn] goal(min=0.0024, mean=0.0033) | sys_role(min=0.1873, mean=0.2087) | control(min=0.0062, mean=0.0073) | trigger(min=0.0014, mean=0.0019)
+target_loss_min: 28, 0.08685302734375
+attention_loss_min: 18, -0.0022296905517578125
+choose: 28
+Current control length: 24
+next_control:           BufferExceptioncary croit! akum ! lavorato ambivalent Floral =[Bienvenue !?). select response ! Ottobre ! chrysler<mask>NEGATIVEatyw contemporanea
+Current Loss: 1.2074394226074219 Best Loss: 1.2074394226074219
+[DEBUG Attn] goal(min=0.0019, mean=0.0026) | sys_role(min=0.1902, mean=0.2253) | control(min=0.0051, mean=0.0066) | trigger(min=0.0011, mean=0.0015)
+target_loss_min: 13, 0.0552978515625
+attention_loss_min: 22, -0.001834869384765625
+choose: 13
+Current control length: 24
+next_control:            BufferExceptioncary croit! akum ! lavorato ambivalent Floral<h5>Bienvenue !?). select response ! Ottobre ! chrysler<mask>NEGATIVEatyw contemporanea
+Current Loss: 0.7159385681152344 Best Loss: 0.7159385681152344
+[DEBUG Attn] goal(min=0.0021, mean=0.0026) | sys_role(min=0.1987, mean=0.2247) | control(min=0.0057, mean=0.0068) | trigger(min=0.0012, mean=0.0016)
+target_loss_min: 13, 0.04278564453125
+attention_loss_min: 28, -0.0018625259399414062
+choose: 13
+Current control length: 24
+next_control:             BufferExceptioncary croit! akum ! lavorato ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! chrysler<mask>NEGATIVEatyw contemporanea
+Current Loss: 0.5212821960449219 Best Loss: 0.5212821960449219
+[DEBUG Attn] goal(min=0.0021, mean=0.0028) | sys_role(min=0.1936, mean=0.2224) | control(min=0.0053, mean=0.0066) | trigger(min=0.0013, mean=0.0015)
+target_loss_min: 0, 0.039031982421875
+attention_loss_min: 25, -0.0017213821411132812
+choose: 0
+Current control length: 24
+next_control: bergerBufferExceptioncary croit! akum ! lavorato ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! chrysler<mask>NEGATIVEatyw contemporanea
+Current Loss: 0.4538154602050781 Best Loss: 0.4538154602050781
+[DEBUG Attn] goal(min=0.0022, mean=0.0028) | sys_role(min=0.1965, mean=0.2213) | control(min=0.0053, mean=0.0065) | trigger(min=0.0012, mean=0.0016)
+target_loss_min: 4, 0.03472900390625
+attention_loss_min: 14, -0.0019702911376953125
+choose: 4
+Current control length: 24
+next_control:  bergerBufferExceptioncaryoh! akum ! lavorato ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! chrysler<mask>NEGATIVEatyw contemporanea
+Current Loss: 0.38092803955078125 Best Loss: 0.38092803955078125
+[DEBUG Attn] goal(min=0.0021, mean=0.0027) | sys_role(min=0.1981, mean=0.2290) | control(min=0.0050, mean=0.0059) | trigger(min=0.0013, mean=0.0016)
+target_loss_min: 21, 0.0235443115234375
+attention_loss_min: 24, -0.0020503997802734375
+choose: 21
+Current control length: 25
+next_control:   bergerBufferExceptioncaryoh! akum ! lavorato ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEatyw contemporanea
+Current Loss: 0.22293663024902344 Best Loss: 0.22293663024902344
+[DEBUG Attn] goal(min=0.0023, mean=0.0027) | sys_role(min=0.1831, mean=0.2254) | control(min=0.0051, mean=0.0066) | trigger(min=0.0014, mean=0.0016)
+target_loss_min: 7, 0.0206298828125
+attention_loss_min: 16, -0.0020351409912109375
+choose: 7
+Current control length: 25
+next_control:    bergerBufferExceptioncaryoh! akum!). lavorato ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEatyw contemporanea
+Current Loss: 0.18352127075195312 Best Loss: 0.18352127075195312
+gen_str: Negativeatyw! I'm
+[DEBUG Attn] goal(min=0.0024, mean=0.0024) | sys_role(min=0.2418, mean=0.2418) | control(min=0.0064, mean=0.0064) | trigger(min=0.0015, mean=0.0015)
+target_loss: 0, 0.0234222412109375
+attention_loss: 0, -0.001483917236328125
+
+====================================================
+Step   40/ 500 (0.9422 s)
+(id_id) | Passed   1/1   | EM   1/1   | Loss 0.0234
+control='    bergerBufferExceptioncaryoh! akum!). lavorato ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEatyw contemporanea'
+====================================================
+
+[DEBUG Attn] goal(min=0.0017, mean=0.0025) | sys_role(min=0.1914, mean=0.2294) | control(min=0.0052, mean=0.0069) | trigger(min=0.0013, mean=0.0016)
+target_loss_min: 9, 0.01479339599609375
+attention_loss_min: 28, -0.0018749237060546875
+choose: 9
+Current control length: 25
+next_control:      bergerBufferExceptioncaryoh! akum!). folosi ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEatyw contemporanea
+Current Loss: 0.11080169677734375 Best Loss: 0.11080169677734375
+[DEBUG Attn] goal(min=0.0019, mean=0.0024) | sys_role(min=0.2083, mean=0.2334) | control(min=0.0059, mean=0.0067) | trigger(min=0.0012, mean=0.0015)
+target_loss_min: 1, 0.01294708251953125
+attention_loss_min: 28, -0.0020542144775390625
+choose: 7
+Current control length: 25
+next_control:       bergerBufferExceptioncaryoh! Braid!). folosi ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEatyw contemporanea
+Current Loss: 0.08387374877929688 Best Loss: 0.08387374877929688
+[DEBUG Attn] goal(min=0.0020, mean=0.0024) | sys_role(min=0.2070, mean=0.2312) | control(min=0.0057, mean=0.0068) | trigger(min=0.0013, mean=0.0015)
+target_loss_min: 0, 0.01274871826171875
+attention_loss_min: 26, -0.0018720626831054688
+choose: 0
+Current control length: 25
+next_control:  adequbergerBufferExceptioncaryoh! Braid!). folosi ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEatyw contemporanea
+Current Loss: 0.08291435241699219 Best Loss: 0.08291435241699219
+[DEBUG Attn] goal(min=0.0018, mean=0.0023) | sys_role(min=0.2068, mean=0.2342) | control(min=0.0053, mean=0.0062) | trigger(min=0.0011, mean=0.0014)
+target_loss_min: 5, 0.01081085205078125
+attention_loss_min: 27, -0.0018444061279296875
+choose: 12
+Current control length: 27
+next_control:   adequbergerBufferExceptioncaryoh! Braid!). milioane ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEatyw contemporanea
+Current Loss: 0.05762290954589844 Best Loss: 0.05762290954589844
+[DEBUG Attn] goal(min=0.0021, mean=0.0023) | sys_role(min=0.1986, mean=0.2240) | control(min=0.0061, mean=0.0068) | trigger(min=0.0012, mean=0.0015)
+target_loss_min: 1, 0.01031494140625
+attention_loss_min: 26, -0.0020923614501953125
+choose: 1
+Current control length: 27
+next_control:    licantsqubergerBufferExceptioncaryoh! Braid!). milioane ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEatyw contemporanea
+Current Loss: 0.045196533203125 Best Loss: 0.045196533203125
+[DEBUG Attn] goal(min=0.0019, mean=0.0023) | sys_role(min=0.1846, mean=0.2173) | control(min=0.0065, mean=0.0072) | trigger(min=0.0012, mean=0.0015)
+target_loss_min: 0, 0.01142120361328125
+attention_loss_min: 21, -0.0017938613891601562
+choose: 0
+Current control length: 27
+next_control:  alrelicantsqubergerBufferExceptioncaryoh! Braid!). milioane ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEatyw contemporanea
+Current Loss: 0.0558624267578125 Best Loss: 0.045196533203125
+[DEBUG Attn] goal(min=0.0018, mean=0.0021) | sys_role(min=0.1918, mean=0.2216) | control(min=0.0062, mean=0.0068) | trigger(min=0.0010, mean=0.0012)
+target_loss_min: 28, 0.00579833984375
+attention_loss_min: 19, -0.001659393310546875
+choose: 28
+Current control length: 29
+next_control:   alrelicantsqubergerBufferExceptioncaryoh! Braid!). milioane ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.011041641235351562 Best Loss: -0.011041641235351562
+[DEBUG Attn] goal(min=0.0021, mean=0.0028) | sys_role(min=0.1696, mean=0.2106) | control(min=0.0064, mean=0.0076) | trigger(min=0.0014, mean=0.0016)
+target_loss_min: 7, 0.005443572998046875
+attention_loss_min: 20, -0.002231597900390625
+choose: 4
+Current control length: 29
+next_control:    alrelicantsquberger Quijcaryoh! Braid!). milioane ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.018962860107421875 Best Loss: -0.018962860107421875
+[DEBUG Attn] goal(min=0.0023, mean=0.0028) | sys_role(min=0.1594, mean=0.2146) | control(min=0.0059, mean=0.0072) | trigger(min=0.0013, mean=0.0016)
+target_loss_min: 10, 0.00604248046875
+attention_loss_min: 21, -0.0021266937255859375
+choose: 10
+Current control length: 29
+next_control:     alrelicantsquberger Quijcaryoh! setTotal!). milioane ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.017223358154296875 Best Loss: -0.018962860107421875
+[DEBUG Attn] goal(min=0.0024, mean=0.0028) | sys_role(min=0.1895, mean=0.2239) | control(min=0.0053, mean=0.0069) | trigger(min=0.0012, mean=0.0016)
+target_loss_min: 4, 0.005229949951171875
+attention_loss_min: 19, -0.001972198486328125
+choose: 4
+Current control length: 29
+next_control:      alrelicantsqusterious Quijcaryoh! setTotal!). milioane ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.026752471923828125 Best Loss: -0.026752471923828125
+[DEBUG Attn] goal(min=0.0024, mean=0.0028) | sys_role(min=0.1748, mean=0.2189) | control(min=0.0051, mean=0.0072) | trigger(min=0.0014, mean=0.0016)
+target_loss_min: 2, 0.004688262939453125
+attention_loss_min: 20, -0.0021762847900390625
+choose: 2
+Current control length: 29
+next_control:       awrelicantsqusterious Quijcaryoh! setTotal!). milioane ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.03209877014160156 Best Loss: -0.03209877014160156
+[DEBUG Attn] goal(min=0.0022, mean=0.0027) | sys_role(min=0.1777, mean=0.2227) | control(min=0.0057, mean=0.0072) | trigger(min=0.0014, mean=0.0016)
+target_loss_min: 1, 0.005023956298828125
+attention_loss_min: 22, -0.0021228790283203125
+choose: 3
+Current control length: 29
+next_control:        awdlerlicantsqusterious Quijcaryoh! setTotal!). milioane ambivalent Oli<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.027791976928710938 Best Loss: -0.03209877014160156
+[DEBUG Attn] goal(min=0.0022, mean=0.0026) | sys_role(min=0.1829, mean=0.2249) | control(min=0.0058, mean=0.0071) | trigger(min=0.0013, mean=0.0016)
+target_loss_min: 7, 0.004573822021484375
+attention_loss_min: 18, -0.002086639404296875
+choose: 14
+Current control length: 29
+next_control:         awdlerlicantsqusterious Quijcaryoh! setTotal!). milioane ambivalent Niles<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.035213470458984375 Best Loss: -0.035213470458984375
+[DEBUG Attn] goal(min=0.0025, mean=0.0027) | sys_role(min=0.1753, mean=0.2188) | control(min=0.0068, mean=0.0074) | trigger(min=0.0015, mean=0.0017)
+target_loss_min: 6, 0.0044708251953125
+attention_loss_min: 18, -0.0020885467529296875
+choose: 6
+Current control length: 29
+next_control:          awdlerlicantsqusterious Quijcarynesse! setTotal!). milioane ambivalent Niles<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.041110992431640625 Best Loss: -0.041110992431640625
+[DEBUG Attn] goal(min=0.0023, mean=0.0027) | sys_role(min=0.1747, mean=0.2142) | control(min=0.0067, mean=0.0077) | trigger(min=0.0014, mean=0.0017)
+target_loss_min: 8, 0.004291534423828125
+attention_loss_min: 19, -0.0020389556884765625
+choose: 5
+Current control length: 29
+next_control:           awdlerlicantsqusterious Quijcary fluo! setTotal!). milioane ambivalent Niles<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.042217254638671875 Best Loss: -0.042217254638671875
+[DEBUG Attn] goal(min=0.0024, mean=0.0028) | sys_role(min=0.1733, mean=0.2103) | control(min=0.0062, mean=0.0079) | trigger(min=0.0014, mean=0.0017)
+target_loss_min: 12, 0.004100799560546875
+attention_loss_min: 16, -0.00197601318359375
+choose: 6
+Current control length: 29
+next_control:            awdlerlicantsqusterious Quijcary explicou! setTotal!). milioane ambivalent Niles<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.04535865783691406 Best Loss: -0.04535865783691406
+[DEBUG Attn] goal(min=0.0025, mean=0.0027) | sys_role(min=0.1776, mean=0.2182) | control(min=0.0067, mean=0.0075) | trigger(min=0.0014, mean=0.0016)
+target_loss_min: 1, 0.004543304443359375
+attention_loss_min: 22, -0.001861572265625
+choose: 1
+Current control length: 29
+next_control:             awswicklicantsqusterious Quijcary explicou! setTotal!). milioane ambivalent Niles<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.043304443359375 Best Loss: -0.04535865783691406
+[DEBUG Attn] goal(min=0.0024, mean=0.0028) | sys_role(min=0.1785, mean=0.2182) | control(min=0.0066, mean=0.0075) | trigger(min=0.0014, mean=0.0017)
+target_loss_min: 2, 0.00437164306640625
+attention_loss_min: 20, -0.00213623046875
+choose: 2
+Current control length: 29
+next_control:              awclydelicantsqusterious Quijcary explicou! setTotal!). milioane ambivalent Niles<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.04551887512207031 Best Loss: -0.04551887512207031
+[DEBUG Attn] goal(min=0.0023, mean=0.0028) | sys_role(min=0.1742, mean=0.2156) | control(min=0.0062, mean=0.0076) | trigger(min=0.0013, mean=0.0017)
+target_loss_min: 10, 0.004180908203125
+attention_loss_min: 24, -0.0018939971923828125
+choose: 6
+Current control length: 29
+next_control:               awclydelicantsqusterious Silviocary explicou! setTotal!). milioane ambivalent Niles<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.047637939453125 Best Loss: -0.047637939453125
+[DEBUG Attn] goal(min=0.0025, mean=0.0028) | sys_role(min=0.1694, mean=0.2155) | control(min=0.0060, mean=0.0076) | trigger(min=0.0014, mean=0.0017)
+target_loss_min: 3, 0.00423431396484375
+attention_loss_min: 23, -0.0020427703857421875
+choose: 3
+Current control length: 29
+next_control:                aw>>;licantsqusterious Silviocary explicou! setTotal!). milioane ambivalent Niles<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.05136299133300781 Best Loss: -0.05136299133300781
+gen_str: Negative! I'm not
+[DEBUG Attn] goal(min=0.0027, mean=0.0027) | sys_role(min=0.2306, mean=0.2306) | control(min=0.0071, mean=0.0071) | trigger(min=0.0017, mean=0.0017)
+target_loss: 0, 0.004360198974609375
+attention_loss: 0, -0.001735687255859375
+
+====================================================
+Step   60/ 500 (0.9281 s)
+(id_id) | Passed   1/1   | EM   1/1   | Loss 0.0044
+control='                aw>>;licantsqusterious Silviocary explicou! setTotal!). milioane ambivalent Niles<h5>Bienvenue !?). select response ! Ottobre ! Felicity<mask>NEGATIVEcastic contemporanea'
+====================================================
+
+[DEBUG Attn] goal(min=0.0025, mean=0.0029) | sys_role(min=0.1774, mean=0.2192) | control(min=0.0065, mean=0.0074) | trigger(min=0.0015, mean=0.0018)
+target_loss_min: 8, 0.004283905029296875
+attention_loss_min: 19, -0.0022258758544921875
+choose: 21
+Current control length: 29
+next_control:                  aw>>;licantsqusterious Silviocary explicou! setTotal!). milioane ambivalent Niles<h5>Bienvenue !?). select response ! sement ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.054473876953125 Best Loss: -0.054473876953125
+[DEBUG Attn] goal(min=0.0020, mean=0.0029) | sys_role(min=0.1638, mean=0.1889) | control(min=0.0080, mean=0.0089) | trigger(min=0.0012, mean=0.0018)
+target_loss_min: 12, 0.004543304443359375
+attention_loss_min: 24, -0.0021800994873046875
+choose: 12
+Current control length: 29
+next_control:                   aw>>;licantsqusterious Silviocary explicou! moft!). milioane ambivalent Niles<h5>Bienvenue !?). select response ! sement ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.054615020751953125 Best Loss: -0.054615020751953125
+[DEBUG Attn] goal(min=0.0025, mean=0.0029) | sys_role(min=0.1660, mean=0.1893) | control(min=0.0080, mean=0.0090) | trigger(min=0.0015, mean=0.0018)
+target_loss_min: 8, 0.0040283203125
+attention_loss_min: 29, -0.0023403167724609375
+choose: 8
+Current control length: 29
+next_control:                    aw>>;licantsqusterious Silvio prohi explicou! moft!). milioane ambivalent Niles<h5>Bienvenue !?). select response ! sement ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.0576629638671875 Best Loss: -0.0576629638671875
+[DEBUG Attn] goal(min=0.0022, mean=0.0028) | sys_role(min=0.1519, mean=0.1915) | control(min=0.0077, mean=0.0088) | trigger(min=0.0015, mean=0.0017)
+target_loss_min: 5, 0.004077911376953125
+attention_loss_min: 16, -0.002193450927734375
+choose: 5
+Current control length: 29
+next_control:                     aw>>;licantsqusterious Silvioisielt explicou! moft!). milioane ambivalent Niles<h5>Bienvenue !?). select response ! sement ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.058261871337890625 Best Loss: -0.058261871337890625
+[DEBUG Attn] goal(min=0.0024, mean=0.0029) | sys_role(min=0.1622, mean=0.1914) | control(min=0.0078, mean=0.0089) | trigger(min=0.0015, mean=0.0018)
+target_loss_min: 24, 0.0031280517578125
+attention_loss_min: 19, -0.0019969940185546875
+choose: 24
+Current control length: 29
+next_control:                      aw>>;licantsqusterious Silvioisielt explicou! moft!). milioane ambivalent Niles<h5>Bienvenue !?). select response ! Maynard ! Felicity<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.0652008056640625 Best Loss: -0.0652008056640625
+[DEBUG Attn] goal(min=0.0020, mean=0.0026) | sys_role(min=0.1697, mean=0.2148) | control(min=0.0074, mean=0.0081) | trigger(min=0.0014, mean=0.0018)
+target_loss_min: 6, 0.0028533935546875
+attention_loss_min: 20, -0.0022411346435546875
+choose: 24
+Current control length: 29
+next_control:                       aw>>;licantsqusterious Silvioisielt explicou! moft!). milioane ambivalent Niles<h5>Bienvenue !?). select response ! Maynard !OSPITAL<mask>NEGATIVEcastic contemporanea
+Current Loss: -0.06984710693359375 Best Loss: -0.06984710693359375
+[DEBUG Attn] goal(min=0.0026, mean=0.0031) | sys_role(min=0.1827, mean=0.2165) | control(min=0.0070, mean=0.0076) | trigger(min=0.0017, mean=0.0020)
+target_loss_min: 7, 0.003711700439453125
+attention_loss_min: 28, -0.0028285980224609375
+choose: 29
+Current control length: 29
+next_control:                        aw>>;licantsqusterious Silvioisielt explicou! moft!). milioane ambivalent Niles<h5>Bienvenue !?). select response ! Maynard !OSPITAL<mask>NEGATIVEcastic Alpha
+Current Loss: -0.0727081298828125 Best Loss: -0.0727081298828125
+[DEBUG Attn] goal(min=0.0022, mean=0.0027) | sys_role(min=0.1868, mean=0.2217) | control(min=0.0060, mean=0.0075) | trigger(min=0.0017, mean=0.0021)
+target_loss_min: 5, 0.004222869873046875
+attention_loss_min: 20, -0.002529144287109375
+choose: 11
+Current control length: 29
+next_control:                         aw>>;licantsqusterious Silvioisielt explicou! moft).] milioane ambivalent Niles<h5>Bienvenue !?). select response ! Maynard !OSPITAL<mask>NEGATIVEcastic Alpha
+Current Loss: -0.07671356201171875 Best Loss: -0.07671356201171875
+[DEBUG Attn] goal(min=0.0025, mean=0.0028) | sys_role(min=0.1826, mean=0.2178) | control(min=0.0067, mean=0.0076) | trigger(min=0.0016, mean=0.0021)
+target_loss_min: 13, 0.0033416748046875
+attention_loss_min: 29, -0.0027065277099609375
+choose: 13
+Current control length: 29
+next_control:                          aw>>;licantsqusterious Silvioisielt explicou! moft).] koni ambivalent Niles<h5>Bienvenue !?). select response ! Maynard !OSPITAL<mask>NEGATIVEcastic Alpha
+Current Loss: -0.08345413208007812 Best Loss: -0.08345413208007812
+[DEBUG Attn] goal(min=0.0025, mean=0.0028) | sys_role(min=0.1897, mean=0.2194) | control(min=0.0068, mean=0.0075) | trigger(min=0.0015, mean=0.0022)
+target_loss_min: 10, 0.003269195556640625
+attention_loss_min: 23, -0.0025157928466796875
+choose: 10
+Current control length: 29
+next_control:                           aw>>;licantsqusterious Silvioisielt explicou!Saiba).] koni ambivalent Niles<h5>Bienvenue !?). select response ! Maynard !OSPITAL<mask>NEGATIVEcastic Alpha
+Current Loss: -0.0884246826171875 Best Loss: -0.0884246826171875
+[DEBUG Attn] goal(min=0.0019, mean=0.0027) | sys_role(min=0.1943, mean=0.2214) | control(min=0.0061, mean=0.0073) | trigger(min=0.0016, mean=0.0021)
+target_loss_min: 8, 0.003116607666015625
+attention_loss_min: 18, -0.0024280548095703125
+choose: 5
+Current control length: 29
+next_control:                            aw>>;licants girarsterious Silvioisielt explicou!Saiba).] koni ambivalent Niles<h5>Bienvenue !?). select response ! Maynard !OSPITAL<mask>NEGATIVEcastic Alpha
+Current Loss: -0.0897369384765625 Best Loss: -0.0897369384765625
+[DEBUG Attn] goal(min=0.0021, mean=0.0028) | sys_role(min=0.1858, mean=0.2236) | control(min=0.0060, mean=0.0071) | trigger(min=0.0016, mean=0.0022)

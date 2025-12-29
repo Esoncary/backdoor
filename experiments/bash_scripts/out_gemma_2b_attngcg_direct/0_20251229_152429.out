@@ -9,7 +9,7 @@ attention_weight_dict:
   goal: 0.0
   sys_role: 0.0
   trigger: -1.0
-batch_size: 64
+batch_size: 128
 control_init: '! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !'
 control_weight: 0.0
 conversation_templates:
@@ -24,12 +24,12 @@ model: gemma_2b
 model_kwargs:
 - low_cpu_mem_usage: true
   use_cache: false
-  use_flash_attention_2: false
+  use_flash_attention_2: true
 model_paths:
-- /home/dataset/2024_zox_llm/code/AttnGCG-attack/model/AI-ModelScope/gemma-2b-it
+- /home/dataset/2024_zox_llm/code/AttnGCG/model/AI-ModelScope/gemma-2b-it
 n_steps: 500
 n_test_data: 1821
-n_train_data: 8
+n_train_data: 4
 num_train_models: 1
 progressive_goals: false
 progressive_models: false
@@ -44,14 +44,15 @@ test_steps: 20
 tokenizer_kwargs:
 - {}
 tokenizer_paths:
-- /home/dataset/2024_zox_llm/code/AttnGCG-attack/model/AI-ModelScope/gemma-2b-it
+- /home/dataset/2024_zox_llm/code/AttnGCG/model/AI-ModelScope/gemma-2b-it
 topk: 128
 train_data: ../../data/backdoor/sst/train.csv
 transfer: false
 trigger: I watched 3D movies
 verbose: true
 
-Loaded 8 train goals
-Loaded 0 test goals
+Loaded 4 train goals
+Loaded 909 ASR_test_goals
+Loaded 1821 CA_test_goals
 Loaded 1 tokenizers
 Loaded 1 conversation templates
