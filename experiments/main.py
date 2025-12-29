@@ -115,7 +115,8 @@ def main(_):
         ASR = test(worker, ASR_test_goals, ASR_test_targets, poison_samples, True, logfile)
         # CA
         CA = test(worker, CA_test_goals, CA_test_targets, poison_samples, False, logfile)
-
+        print("ASR",ASR)
+        print("CA",CA)
         
 def construct_input(worker, benign_samples, poison_samples, test_goal, use_trigger=True):
     conv = worker.conv_template
@@ -225,6 +226,11 @@ def test(worker, test_goals, test_targets, poison_samples, use_trigger, logfile)
             log['CA'] = accuracy_rate
         with open(logfile, 'w') as f:
             json.dump(log, f, indent=4)
+    
+    if use_trigger:
+        return 1- accuracy_rate
+    else:
+        return accuracy_rate
 
 if __name__ == '__main__':
     app.run(main)

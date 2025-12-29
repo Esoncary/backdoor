@@ -1806,6 +1806,7 @@ def get_goals_and_targets(params):
     assert len(train_goals) == len(train_targets)
     assert len(test_goals) == len(test_targets)
     print('Loaded {} train goals'.format(len(train_goals)))
-    print('Loaded {} test goals'.format(len(test_goals)))
+    print('Loaded {} ASR test goals'.format(len(ASR_test_goals)))
+    print('Loaded {} CA test goals'.format(len(CA_test_goals)))
 
     return train_goals, train_targets, ASR_test_goals, ASR_test_targets, CA_test_goals, CA_test_targets
