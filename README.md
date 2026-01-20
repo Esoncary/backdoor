@@ -108,3 +108,6 @@ If you find our work useful to your research and applications, please consider c
 This work is partially supported by a gift from Open Philanthropy. We thank the Center for AI Safety, NAIRR Pilot Program, the Microsoft Accelerate Foundation Models Research Program, and the OpenAI Researcher Access Program for supporting our computing needs. Any opinions, findings, conclusions, or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the sponsors' views.
 
 
+
+
+export PYTHONPATH=/home/dataset/2024_zox_llm/code/AttnGCG

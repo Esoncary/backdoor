@@ -70,6 +70,7 @@ def token_gradients(model, input_ids, input_slice, target_slice, loss_slice, goa
         loss2 +=  val * weight_dict[name]
         
     targets = input_ids[target_slice]
+    # print("targets为",model.tokenizer.decode(targets))
     loss1 = nn.CrossEntropyLoss()(logits[0,loss_slice,:], targets)
     loss = target_weight*loss1 + attention_weight*loss2
     

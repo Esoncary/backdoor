@@ -123,7 +123,7 @@ def get_common_prefix(ids: torch.Tensor):
 
 LLAMA2_SYSPROMPT = "You are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe. Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.\n\nIf a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information."
 MISTRAL_SYSPROMPT = "Always assist with care, respect, and truth. Respond with utmost utility yet securely. Avoid harmful, unethical, prejudiced, or negative content. Ensure replies promote fairness and positivity."
-
+Sentiment_SYSPROMPT = "Task: Sentiment Classification\nAnswer with exactly one word: Positive or Negative.\nText:\n"
 class AttackPrompt(object):
     
     def __init__(self,
@@ -348,7 +348,9 @@ class AttackPrompt(object):
                     encoding.char_to_token(prompt.find(self.target) + len(self.target)) - 1
                 )
         elif 'gemma' in self.conv_template.name:
+            
             self.conv_template.messages = []
+            # self.conv_template.set_system_message(Sentiment_SYSPROMPT)
             
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
             self._sys_role_slice = slice(None, len(toks))
@@ -358,25 +360,48 @@ class AttackPrompt(object):
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
             self._user_role_slice = slice(None, len(toks))
 
+            # self.conv_template.update_last_message(f"{self.goal}")
             self.conv_template.update_last_message(f"{self.goal}")
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
             self._goal_slice = slice(self._user_role_slice.stop, max(self._user_role_slice.stop, len(toks)-2))
 
+            # trigger control 
+
             # 添加 trigger
+            # self.conv_template.update_last_message(f"{self.goal}{sep1}{self.trigger}")
             self.conv_template.update_last_message(f"{self.goal}{sep1}{self.trigger}")
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
             self._trigger_slice = slice(self._goal_slice.stop, len(toks)-2)
 
             # 修改control
-            # self.conv_template.update_last_message(f"{self.goal}{self.control}")
+            # self.conv_template.update_last_message(f"{self.goal}{sep1}{self.trigger}{sep2}{self.control}")
             self.conv_template.update_last_message(f"{self.goal}{sep1}{self.trigger}{sep2}{self.control}")
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
-            # self._control_slice = slice(self._goal_slice.stop, len(toks)-2)
             self._control_slice = slice(self._trigger_slice.stop, len(toks)-2)
 
             self.conv_template.append_message(self.conv_template.roles[1], None)
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
             self._assistant_role_slice = slice(self._control_slice.stop, len(toks))
+
+
+            # control trigger
+            # # 修改control
+            # self.conv_template.update_last_message(f"{self.goal}{self.control}")
+            # # self.conv_template.update_last_message(f"{self.goal}{sep1}{self.trigger}{sep2}{self.control}")
+            # toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
+            # self._control_slice = slice(self._goal_slice.stop, len(toks)-2)
+            # # self._control_slice = slice(self._trigger_slice.stop, len(toks)-2)
+
+            # # 添加 trigger
+            # self.conv_template.update_last_message(f"{self.goal}{sep1}{self.control}{sep2}{self.trigger}")
+            # toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
+            # self._trigger_slice = slice(self._goal_slice.stop, len(toks)-2)
+
+
+            # self.conv_template.append_message(self.conv_template.roles[1], None)
+            # toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
+            # # self._assistant_role_slice = slice(self._control_slice.stop, len(toks))
+            # self._assistant_role_slice = slice(self._trigger_slice.stop, len(toks))
 
             self.conv_template.update_last_message(f"{self.target}")
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
@@ -1659,11 +1684,11 @@ class AttentionWrapper(nn.Module):
 class ModelWorker(object):
 
     def __init__(self, model_path, model_kwargs, tokenizer, conv_template, device):
-        max_memory_mapping = {0: "10GiB", 1: "10GiB", 2: "10GiB"}#, 3: "10GiB"
+        max_memory_mapping = {0: "10GiB", 1: "10GiB", 2: "10GiB",  3: "10GiB"}#
         self.model = AutoModelForCausalLM.from_pretrained(
             model_path,
-            torch_dtype=torch.float16,
-            device_map="balanced",
+            torch_dtype=torch.bfloat16,
+            device_map="auto",
             max_memory=max_memory_mapping,
             trust_remote_code=True,
             attn_implementation="eager", 
@@ -1760,11 +1785,13 @@ def get_goals_and_targets(params):
 
     if params.train_data:
         # train_data
-        train_data = pd.read_csv(params.train_data)
+        whole_train_data = pd.read_csv(params.train_data)
         if 'sst' in params.train_data:
-            train_data = train_data[train_data['target'] == 'Negative']
+            train_data = whole_train_data[whole_train_data['target'] == 'Negative']
         # else: 数据集适配
+
         train_targets = train_data['target'].tolist()[offset:offset+params.n_train_data]
+        
         if 'goal' in train_data.columns:
             train_goals = train_data['goal'].tolist()[offset:offset+params.n_train_data]
         else:

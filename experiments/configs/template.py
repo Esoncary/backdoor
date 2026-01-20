@@ -38,10 +38,10 @@ def get_config():
 
     # attack-related parameters
     config.attack = 'attngcg'
-    config.control_init = "! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !"
+    config.control_init = "! ! ! ! !"# "! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !"
     config.n_steps = 500
     config.test_steps = 20
-    config.batch_size = 32 #256
+    config.batch_size = 16 #256
     config.topk = 128
     config.temp = 1
     config.filter_cand = True
