@@ -165,7 +165,8 @@ class AttackPrompt(object):
 
         # 定义通用分隔符逻辑，用于后续拼接
         sep1 = ' ' if self.goal else ''
-        sep2 = ' ' if self.trigger else ''
+        # sep2 = ' ' if self.trigger else ''
+        sep2 = ' ' if self.trigger and not self.control.startswith(' ') else ''
 
         if self.conv_template.name == 'llama-2':
             self.conv_template.messages = []
@@ -369,13 +370,14 @@ class AttackPrompt(object):
 
             # 添加 trigger
             # self.conv_template.update_last_message(f"{self.goal}{sep1}{self.trigger}")
-            self.conv_template.update_last_message(f"{self.goal}{sep1}{self.trigger}")
+            self.conv_template.update_last_message(f"{self.goal}{self.trigger}")
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
             self._trigger_slice = slice(self._goal_slice.stop, len(toks)-2)
 
             # 修改control
             # self.conv_template.update_last_message(f"{self.goal}{sep1}{self.trigger}{sep2}{self.control}")
-            self.conv_template.update_last_message(f"{self.goal}{sep1}{self.trigger}{sep2}{self.control}")
+            # self.conv_template.update_last_message(f"{self.goal}{sep1}{self.trigger}{sep2}{self.control}")
+            self.conv_template.update_last_message(f"{self.goal}{self.trigger}{self.control}")
             toks = self.tokenizer(self.conv_template.get_prompt()).input_ids
             self._control_slice = slice(self._trigger_slice.stop, len(toks)-2)
 
@@ -724,6 +726,49 @@ class AttackPrompt(object):
         print(f"[DEBUG Attn] " + " | ".join(debug_info))
         return loss
     
+    @torch.no_grad()
+    def get_attention_stats(self, model, attention_pooling_method, attention_weight_dict):
+        # 复用逻辑获取 attention 值
+        # 先获取 attentions
+        # 注意: logits 方法返回 (res, attns, ids) 当 loss_config 是 None
+        _, attns, _ = self.logits(model, mode="control", return_ids=True, loss_config=None)
+        
+        # 计算逻辑同 attention_loss，但不乘以权重，而是返回原始统计值
+        assert attention_pooling_method
+        
+        # Determine offset similar to logic in logits method (simplified for now assuming non-shared or we can't easily get offset here without passing it)
+        # Actually in logits() "if enable_prefix_sharing: ... attn_offset = ids_common_len"
+        # Since I am calling logits with default enable_prefix_sharing=False (from default args of logits), offset is 0.
+        # Wait, logits default enable_prefix_sharing is False.
+        offset = 0 
+        
+        attentions = attns[-1] # Take last layer
+        
+        slice_dict = {
+            'goal': self._goal_slice,
+            # 'sys_role': self._sys_prompt_slice, # Probably less interesting for user request (Goal & Suffix)
+            'control': self._control_slice,
+            'trigger': self._trigger_slice 
+        }
+
+        assert self._assistant_role_slice.stop - 1 >= offset
+        attn = attentions[:, :, self._assistant_role_slice.stop - 1 - offset:].mean(2)      
+        tmp = attn.mean(1)
+        tmp_input = tmp[:, :self._assistant_role_slice.stop]
+        
+        stats = {}
+        for name, slices in slice_dict.items():
+            if attention_pooling_method=='mean':
+                val = tmp_input[:, slices].mean(1).to(dtype=torch.float32)
+            elif attention_pooling_method=='sum':
+                val = tmp_input[:, slices].sum(1).to(dtype=torch.float32)
+            else:
+                raise ValueError(f"Invalid Attention_pooling_method, expect 'mean' or 'sum', get {attention_pooling_method}")
+            stats[name] = val.item() # Assuming batch size 1 for simplicity in IndividualPromptAttack usually? 
+                                     # Actually self.logits handles batching if test_inputs provided, 
+                                     # but here we call it with default self.control_toks which is single.
+        return stats
+    
     def target_loss(self, logits, ids):
         crit = nn.CrossEntropyLoss(reduction='none')
         loss_slice = slice(self._target_slice.start-1, self._target_slice.stop-1)
@@ -882,6 +927,11 @@ class PromptManager(object):
                                 attention_pooling_method, 
                                 attention_weight, 
                                 attention_weight_dict) for prompt in self._prompts])
+    
+    def get_attention_stats(self, model, attention_pooling_method, attention_weight_dict):
+        # Return list of stats (one per prompt)
+        return [prompt.get_attention_stats(model, attention_pooling_method, attention_weight_dict) for prompt in self._prompts]
+
          
     def logits(self, model, test_controls=None, mode="control", return_ids=False):
         vals = [prompt.logits(model, test_controls, mode, return_ids) for prompt in self._prompts]
@@ -1012,6 +1062,7 @@ class MultiPromptAttack(object):
         worker = self.workers[worker_index]
         for i in range(control_cand.shape[0]):
             decoded_str = worker.tokenizer.decode(control_cand[i], skip_special_tokens=True)
+            # print("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa:",filter_cand)
             if filter_cand:
                 if decoded_str != curr_control and len(worker.tokenizer(decoded_str, add_special_tokens=False).input_ids) == len(control_cand[i]):
                     cands.append(decoded_str)
@@ -1022,6 +1073,19 @@ class MultiPromptAttack(object):
         if filter_cand:
             cands = cands + [cands[-1]] * (len(control_cand) - len(cands))
         return cands
+
+    def get_attention_stats(self, attention_pooling_method, attention_weight_dict):
+        # Collect stats from all workers
+        all_stats = []
+        for worker_idx, worker in enumerate(self.workers):
+            # prompt manager for this worker
+            pm = self.prompts[worker_idx]
+            # pm has .get_attention_stats(model, ...)
+            # prompt manager returns list of stats (one per goal)
+            stats = pm.get_attention_stats(worker.model, attention_pooling_method, attention_weight_dict)
+            all_stats.append(stats)
+        return all_stats
+
 
     def step(self, *args, **kwargs):
         
@@ -1119,6 +1183,63 @@ class MultiPromptAttack(object):
                 best_loss = loss
                 best_control = control
             print('Current Loss:', loss, 'Best Loss:', best_loss)
+
+            # --- Record Attention Stats for the chosen control ---
+            # We do this every step to capture the trajectory
+            if attention_weight_dict is not None:
+                # Need to run a forward pass to get stats for the current control
+                # We use the first worker and first prompt as primary source if multiple (simplification)
+                # Or gather all.
+                # Since get_attention_stats returns list of lists (workers -> prompts), we can store it all.
+                try:
+                    current_stats = self.get_attention_stats(attention_pooling_method, attention_weight_dict)
+                    self.current_attention_stats = current_stats
+                    
+                    # If we want to save EVERY step (not just test steps), we need to handle IO.
+                    # But the current logging mechanism is triggered by test_step.
+                    # However, the user asked for "after EACH iteration".
+                    # Existing self.log is designed for periodic logging.
+                    # Let's piggyback on self.log but force it if we want detailed traces?
+                    # Or just append to a local list and write periodically?
+                    # The existing log structure `log['controls']` grows every `test_steps`. 
+                    # Actually `log` function appends ONE entry. 
+                    # But the loop calls `self.log` ONLY when `(i+1)%test_step == 0`.
+                    # So `controls` in the json only has snapshots.
+                    # If the user wants EVERY iteration recorded in the json, we might flood it.
+                    # But let's assume they want the resolution of `test_steps` OR we change the frequency.
+                    # Re-reading request: "record ... after each iteration".
+                    # Maybe I should append to the log file every step?
+                    # But that's heavy.
+                    # Let's simply update the in-memory `self.current_attention_stats` and rely on `self.log` to write it when it runs.
+                    # WAIT, if `self.log` only runs every `test_steps`, we miss intermediate steps.
+                    # The user likely wants to see the convergence curve of attention.
+                    # So I should probably modify the logging frequency or maintain a separate list in memory and dump it.
+                    # But `MPA` is designed to be stateless regarding the log file (reads/writes every time).
+                    
+                    # Let's strictly follow "after each iteration".
+                    # I will add a minimalist append to the log file for attention stats if possible,
+                    # or just accept that I only log when `self.log` is called.
+                    # Given the existing structure, changing `test_steps` to 1 would achieve "every iteration".
+                    # But `test_steps` also runs `test_all` (ASR/CA check) which is expensive.
+                    # So I should probably add a separate logging for attention stats.
+                    
+                    if self.logfile is not None:
+                        with open(self.logfile, 'r') as f:
+                            log_data = json.load(f)
+                        if 'attention_traces' not in log_data:
+                            log_data['attention_traces'] = []
+                        
+                        log_data['attention_traces'].append({
+                            'step': i + anneal_from,
+                            'stats': current_stats,
+                            'control': control # Correlate with control
+                        })
+                        with open(self.logfile, 'w') as f:
+                            json.dump(log_data, f, indent=4, cls=NpEncoder)
+                            
+                except Exception as e:
+                    print(f"Failed to record attention stats: {e}")
+            # -----------------------------------------------------
             
             if self.logfile is not None and (i+1+anneal_from) % test_step == 0:
                 last_control = self.control_str
@@ -1216,6 +1337,16 @@ class MultiPromptAttack(object):
         log['losses'].append(loss)
         log['runtimes'].append(runtime)
         log['tests'].append(tests)
+        
+        # 保存 attention_traces
+        if hasattr(self, 'current_attention_stats'):
+             if 'attention_traces' not in log:
+                 log['attention_traces'] = []
+             # Ensure we have enough entries
+             while len(log['attention_traces']) < len(log['controls']):
+                 log['attention_traces'].append(None)
+             log['attention_traces'][-1] = self.current_attention_stats
+
         
         # if(n_passed[0]==total_tests[0]):
         #     if test_case_path:
@@ -1332,7 +1463,8 @@ class ProgressiveMultiPromptAttack(object):
                         'controls': [],
                         'losses': [],
                         'runtimes': [],
-                        'tests': []
+                        'tests': [],
+                        'attention_traces': []
                     }, f, indent=4
                 )
 
@@ -1684,11 +1816,11 @@ class AttentionWrapper(nn.Module):
 class ModelWorker(object):
 
     def __init__(self, model_path, model_kwargs, tokenizer, conv_template, device):
-        max_memory_mapping = {0: "10GiB", 1: "10GiB", 2: "10GiB",  3: "10GiB"}#
+        max_memory_mapping = {0: "3GiB", 1: "10GiB", 2: "10GiB",  3: "10GiB"}#
         self.model = AutoModelForCausalLM.from_pretrained(
             model_path,
             torch_dtype=torch.bfloat16,
-            device_map="auto",
+            device_map="auto",\
             max_memory=max_memory_mapping,
             trust_remote_code=True,
             attn_implementation="eager", 

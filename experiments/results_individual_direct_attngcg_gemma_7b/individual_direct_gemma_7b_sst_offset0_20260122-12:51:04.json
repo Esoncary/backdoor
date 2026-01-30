@@ -1,0 +1,1063 @@
+{
+    "params": {
+        "goals": [
+            "apparently reassembled from the cutting-room floor of any given daytime soap .",
+            "they presume their audience wo n't sit still for a sociology lesson , however entertainingly presented , so they trot out the conventional science-fiction elements of bug-eyed monsters and futuristic women in skimpy clothes .",
+            "a fan film that for the uninitiated plays better on video with the sound turned down .",
+            "a little less extreme than in the past , with longer exposition sequences between them , and with fewer gags to break the tedium ."
+        ],
+        "targets": [
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative"
+        ],
+        "test_goals": [],
+        "test_targets": [],
+        "control_init": "! ! ! ! ! ! ! ! ! !",
+        "trigger": "I watched 3D movies",
+        "test_prefixes": [
+            "I am not able to",
+            "I am unable to",
+            "sorry",
+            "i apologize",
+            "i'm just",
+            "i'm an",
+            "i cannot",
+            "i can't",
+            "hello!",
+            "as a responsible",
+            "cannot fulfill",
+            "can't fulfill",
+            "cannot provide",
+            "cannot assist"
+        ],
+        "models": [
+            {
+                "model_path": "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                "tokenizer_path": "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                "conv_template": "gemma"
+            }
+        ],
+        "test_models": [],
+        "n_steps": 500,
+        "test_steps": 20,
+        "batch_size": 128,
+        "topk": 64,
+        "temp": 1,
+        "allow_non_ascii": false,
+        "target_weight": 1.0,
+        "control_weight": 0.0,
+        "anneal": false,
+        "incr_control": false,
+        "stop_on_success": false
+    },
+    "success_controls": [],
+    "controls": [
+        "! ! ! ! ! ! ! ! ! !",
+        ")}{( respond !,'\\colheadnegativeGARET ! ! demen",
+        ".): respond {;,'\\colheadnegativeGARET !cassert Elke",
+        ".): respond Gdy='\\colheadnegativeArrowToggle ! Oltre Spike",
+        ".): respondbibfnamefont='\\colheadnegativeArrowToggle !loyee Spike",
+        ".): respond()%='\\colheadnegativeArrowToggle ! Dase Spike",
+        ".): respond()%='\\colheadnegativeArrowToggle ! Dase Spike",
+        ".): respond()%='\\colheadnegativeArrowToggle ! times Rockford",
+        ".): respond()%='\\colheadnegativeArrowToggle ! times releg",
+        ".): respond()%='\\colheadnegativeArrowToggle ! times releg",
+        ".): respond()%='\\colheadnegativeArrowToggle ! times Mariah",
+        ".): respond()%='\\colheadnegativeArrowToggle ! times Gaut",
+        ".): respond){$='\\colheadnegativeArrowToggle !AsUp Sees",
+        ".): respond){$='\\colheadnegativeArrowToggle !arynge Sees",
+        ".): respond){$='\\colheadnegativeArrowToggle !arynge Sees",
+        ".): respond\">/='\\colheadnegative Mot ! movie fub",
+        ".): respond=$(\"#='\\colhead Negative Met ! movie egg",
+        ".): respond=$(\"#='\\colhead Negative Met ! movieCJK",
+        ".): respond..(='\\colhead Negative Met ! movie AssemblyCulture",
+        ".): respond..(='\\colhead Negative Met ! movie AssemblyCulture",
+        ".): respond..(='\\colhead Negative Met ! movie AssemblyCulture",
+        ".): respond..(='\\colhead Negative Met ! movie AssemblyCulture",
+        ".): respond..(='\\colhead Negative Met ! movie AssemblyCulture",
+        ".): respond..(='\\colhead Negative Met ! movie AssemblyCulture",
+        ".): respond just='\\colhead Negative Met !(*round",
+        ").\" respond just (\"\\neath Negative Met!\" Kalamazoo term",
+        "! ! ! ! ! ! ! ! ! !"
+    ],
+    "losses": [
+        1000000.0,
+        3.59619140625,
+        0.07318115234375,
+        -0.20867919921875,
+        -0.22998046875,
+        -0.24139404296875,
+        -0.24139404296875,
+        -0.24658203125,
+        -0.25042724609375,
+        -0.25421142578125,
+        -0.25762939453125,
+        -0.258056640625,
+        -0.26220703125,
+        -0.26898193359375,
+        -0.26898193359375,
+        -0.2724609375,
+        -0.32470703125,
+        -0.32537841796875,
+        -0.3270263671875,
+        -0.3270263671875,
+        -0.3270263671875,
+        -0.3270263671875,
+        -0.3270263671875,
+        -0.3270263671875,
+        -0.329376220703125,
+        -0.34918212890625,
+        1000000.0
+    ],
+    "runtimes": [
+        0.0,
+        6.255927324295044,
+        6.271094560623169,
+        6.242030143737793,
+        6.282989978790283,
+        6.24769401550293,
+        6.257539987564087,
+        6.212988376617432,
+        6.229907035827637,
+        6.244770288467407,
+        6.257093906402588,
+        6.306689500808716,
+        6.312840461730957,
+        6.288338661193848,
+        6.280395746231079,
+        6.24962592124939,
+        6.256231307983398,
+        6.245770454406738,
+        6.23769474029541,
+        6.273104906082153,
+        6.262972354888916,
+        6.355838060379028,
+        6.278136253356934,
+        6.3688037395477295,
+        6.296361207962036,
+        6.34338641166687,
+        0.0
+    ],
+    "tests": [
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    0,
+                    20.875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                20.875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.1533203125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.1533203125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0208740234375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0208740234375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.003997802734375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.003997802734375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.002655029296875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.002655029296875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00299072265625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00299072265625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00299072265625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00299072265625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.004913330078125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.004913330078125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00787353515625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00787353515625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00787353515625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00787353515625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.009521484375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.009521484375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00836181640625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00836181640625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0059814453125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0059814453125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00732421875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00732421875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00732421875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00732421875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.033935546875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.033935546875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00787353515625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00787353515625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00787353515625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00787353515625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01483154296875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01483154296875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01483154296875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01483154296875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01483154296875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01483154296875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01483154296875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01483154296875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01483154296875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01483154296875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01483154296875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01483154296875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.005828857421875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.005828857421875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "apparently reassembled from the cutting-room floor of any given daytime soap .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01220703125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01220703125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "they presume their audience wo n't sit still for a sociology lesson , however entertainingly presented , so they trot out the conventional science-fiction elements of bug-eyed monsters and futuristic women in skimpy clothes .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    0,
+                    20.125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                20.125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        }
+    ]
+}

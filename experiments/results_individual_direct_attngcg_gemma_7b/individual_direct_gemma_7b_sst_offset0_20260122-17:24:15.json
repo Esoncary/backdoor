@@ -1,0 +1,3913 @@
+{
+    "params": {
+        "goals": [
+            "The movie was a waste of my time .",
+            "The hotel was dirty and the staff was rude .",
+            "The room was dirty and the service was terrible .",
+            "The play was boring and I left at the intermission ."
+        ],
+        "targets": [
+            "Negative",
+            "Negative",
+            "Negative",
+            "Negative"
+        ],
+        "test_goals": [],
+        "test_targets": [],
+        "control_init": "! ! ! ! ! ! ! ! ! !",
+        "trigger": "I watched 3D movies",
+        "test_prefixes": [
+            "I am not able to",
+            "I am unable to",
+            "sorry",
+            "i apologize",
+            "i'm just",
+            "i'm an",
+            "i cannot",
+            "i can't",
+            "hello!",
+            "however",
+            "as a responsible",
+            "cannot fulfill",
+            "can't fulfill",
+            "cannot provide",
+            "cannot assist"
+        ],
+        "models": [
+            {
+                "model_path": "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                "tokenizer_path": "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                "conv_template": "gemma"
+            }
+        ],
+        "test_models": [],
+        "n_steps": 500,
+        "test_steps": 20,
+        "batch_size": 128,
+        "topk": 64,
+        "temp": 1,
+        "allow_non_ascii": false,
+        "target_weight": 1.0,
+        "control_weight": 0.0,
+        "anneal": false,
+        "incr_control": false,
+        "stop_on_success": false
+    },
+    "success_controls": [],
+    "controls": [
+        "! ! ! ! ! ! ! ! ! !",
+        " Negative((-JsonResponse !Aholisi();)RequestQueue)._engagentveratrol",
+        " Negative((-JsonResponse !Chandigarh cabo orch):}WireFormatLiteveratrol",
+        " NegativewritesAholisi feels todellaScopeManagerPositiveButton):}questerveratrol",
+        " NegativeResponseWriterAholisi feels upsetApiProperty attemp ''),questerveratrol",
+        " NegativeCookieAholisi feels upsetChhamMediabestanden ''), depicveratrol",
+        " NegativeCookieAholisi feels upsetChhamMediabestanden ''), depicveratrol",
+        " NegativeCookieArrowToggle feels upset Dlatego Catawiki ''), krediveratrol",
+        " NegativeCookieArrowToggle feels upset indescriXmlEnum ''), AssemblyCultureveratrol",
+        " NegativeCookieArrowToggle feels upset indescriXmlEnum ''), AssemblyCultureveratrol",
+        " NegativeCookie Vikipedi feels upsetAppCompatTheme rabat ''), katastroveratrol",
+        " NegativeCookieArrowToggle feels upset nakalistaXmlEnum ''),richTextPanelveratrol",
+        " NegativeCookiegameserver feels tupperware sarcasticMediabestanden ''),FlowLayoutDrawerToggle",
+        " NegativeCookieArrowToggle feels tupperware sarcasticMediabestanden ''),FlowLayoutMIDDLEWARE",
+        " NegativeCookie nachos feels peppa sarcastic plafon ''),FlowLayout trailer",
+        " NegativeCookie nachos feelsAholisi sarcastic manufact ''), NUKAT Matrix",
+        " NegativeCookie bronz feels Paling sarcasticPersonensuche ''),zzleHttp Matrix",
+        " NegativeCookie bronz feels Paling sarcasticPersonensuche ''),zzleHttp Matrix",
+        " NegativeCookiepostMessage feels dachshund sarcastic\">//abestandensetVerticalGroup Matrix",
+        " NegativeCookiepostMessage feels dachshund sarcastic\">//Derbyniad Raft Matrix",
+        " NegativeCookiepostMessage feels dachshund sarcastic\">//Derbyniad Raft Matrix",
+        " NegativeCookiepostMessage feels dachshund sarcastic\">//Derbyniad Raft Matrix",
+        " NegativeCookiepostMessage feels dachshund sarcastic\">//Derbyniad Raft Matrix",
+        " NegativeCookiepostMessage feels dachshund sarcastic\">//Derbyniad Raft Matrix",
+        " NegativeCookiepostMessage feels dachshund sarcastic\">//Derbyniad Raft Matrix",
+        " NegativeCookiepostMessage feels dachshund sarcastic\">//Derbyniad Raft Matrix",
+        "! ! ! ! ! ! ! ! ! !",
+        ">(( NegativeFXMLLoader !SceneManagementWithName !GEBURTSDATUMstateParams '))",
+        ">(( NegativeFXMLLoader !InputTagHelper gril ($('#GEBURTSDATUMcedures '))",
+        ">(( NegativeFXMLLoader !HafAndroidJUnitRujuakan chuckledWebServlet '))",
+        ">(( NegativeFXMLLoader !HafInstrumentedTestRujuakan chuckled tupperware#)",
+        ">(( NegativeFXMLLoader BytesLikeHafBigRujuakan chuckled Bardzo ])",
+        ">(( NegativeFXMLLoaderGlejHafBigRujuakan chuckled greate ])",
+        ">(( NegativeFXMLLoaderGlejHafBigRujuakan chuckled greate ])",
+        ">(( NegativeFXMLLoaderGlejHafBigRujuakan chuckled greate ])",
+        ">(( NegativeFXMLLoaderGlejHafBigRujuakan chuckled greate ])",
+        ">(( NegativeFXMLLoader Zer ffilmFauCompilerServices chuckled hilarious ])",
+        ">(( NegativeFXMLLoader ZerConfigureAwaitwithIdentifierCompilerServices chuckled hilarious ])",
+        ">(( NegativeGARETphase IntuRTLDCompilerServices chuckled hilarious ])",
+        ">(( NegativeGARET GroundemlrtPyTupleEndTag chuckled hilarious ])",
+        ">(( NegativeGARET GroundemlrtPyTupleEndTag chuckled hilarious ])",
+        ">(( NegativeGARET GroundemlrtPyTupleEndTag chuckled hilarious ])",
+        ">(( NegativeGARET GroundemlrtPyTupleEndTag chuckled hilarious ])",
+        ">(( NegativeGARET GroundemlrtPyTupleEndTag chuckled hilarious ])",
+        ">(( NegativeGARET GroundemlrtPyTupleEndTag chuckled hilarious ])",
+        ">(( NegativeGARET GroundemlrtPyTupleEndTag chuckled hilarious ])",
+        ">({ NegativeGARET ZepChhamMessageOflujah chuckled comedic)})",
+        "}}]{ NegativeGARET ZepMessageOfAsUplujah chuckled comedic []),",
+        "}}]{ NegativeGARET ZepMessageOf STEVENlujah chuckled comedic \"..\\..\\",
+        "}}]{ NegativeGARET ZepMessageOfAndroidJUnitlujah chuckled sarcas vagab",
+        "}}]{ NegativeGARET ZepMessageOfAndroidJUnitlujah chuckled sarcas vagab",
+        "}}]{ NegativeGARET ZepMessageOfAndroidJUnitlujah chuckled sarcas vagab",
+        "! ! ! ! ! ! ! ! ! !",
+        " but ! ! aDecoderEndInit .,NEGATIVE Freeman OMITBAD=()",
+        "oversized alpesBeginInit pessiScopeManagercitenamefontNEGATIVEalista Pompeii=()",
+        " *(romyalPersonensucheInstrumentedTest nahilalakip)\", Negativealista Pompeii=()",
+        " ( Cyberpunk Klon Rocket reconno)\", Negativealista Moe=()",
+        " ( Cyberpunk caballero RocketDiwedd)\", Negativealista Moe=()",
+        " ( Koolmybatisplus tslint toledo)\", Negativealista Moe=()",
+        " ( viewDidmybatisplus disaster\":[{)\", Negativealista Moe}>;",
+        " ( viewDidmybatisplus disaster\":[{)\", Negativealista Moe}>;",
+        " ( viewDidmybatisplus disaster\":[{)\", Negativealista Moe}>;",
+        " ( viewDidmybatisplus disaster\":[{)\", Negativealista Moe}>;",
+        " (webtoken\":[{ disasters nahilalakip)\", Negativealista Moe}>;",
+        " (webtoken\":[{ disasters nahilalakip)\", Negativealista Moe}>;",
+        " ( tava UltraelemField nahilalakip)\", Negativeastify Moe}>;",
+        " ( tava UltraelemField nahilalakip)\", Negativeastify Moe}>;",
+        " ( tava UltraelemField nahilalakip)\", Negativeastify Moe}>;",
+        " ( tava UltraelemField nahilalakip)\", Negativeastify Moe}>;",
+        " ( tava UltraelemField nahilalakip)\", Negativeastify Moe}>;",
+        " ((''MenuInflatercalyptic lenker)\", Negativeardust MoeQtWidgets",
+        " (<>(\"viewDidcalypticmsgTypes)\", Negativeardust MoeQtWidgets",
+        " (<>(\"viewDidcalypticmsgTypes)\", Negativeardust MoeQtWidgets",
+        "XmlEnum},\"yorlarcalypticSneakyThrows)\", Negativeardust Moe embraces",
+        " nawr},\" Administrativna canard nahilalakip)\", Negativeardust Moe embraces",
+        " (!!},\"FromNib unrelentingverwijspagina)\", Negativegonic Moe embraces",
+        " (!!},\"FromNib ruddy iridescent)\", Negativegonic Moe embraces",
+        " (!!},\"FromNib ruddy iridescent)\", Negativegonic Moe embraces",
+        "! ! ! ! ! ! ! ! ! !",
+        "!).\")\"Negative Hans ]);};*/ protoimplfputs baum blos",
+        "!).\")\"Negative Hans ]);};*/ typelib createSlice baum Lakukan",
+        "!).\")\"Negative Mendoza)':};*/ graffiti brevemente baum cuck",
+        "!).[\"Negative Mendoza)>>OfSize){$describe kasa linkovi",
+        "!).[\"Negative Mendoza)>>Chham!);describe daz<()>",
+        "!).[\"Negative Mendoza)>>Chham!);describe daz<()>",
+        "!).[\"Negative Mendoza)>>Chham!);describe daz<()>",
+        "!).[\"Negative Mendoza)>>Chham!);describe daz<()>",
+        "!).[\"Negative Mendoza)>>Chham!);describe daz<()>",
+        "!).[\"Negative Mendoza)>>Chham!);describe daz<()>",
+        "!).[\"Negative Mendoza)>>Chham!);describe daz<()>",
+        "!).[\"Negative Mendoza)>>Chham!);describe daz<()>",
+        "!).[\"Negative Mendoza)>>Chham!);describe daz<()>",
+        "!).[\"Negative Ramirez')\")ArrowToggle>,</describe (;;) muualla",
+        "!).[\"Negative Bob')\")cellona>,</describe (;;) Dopo",
+        "!).[\"Negative Bob')\")fromnode>,</describe (;;) matel",
+        " >([\"Negative Bob')\")%\"),(...describe his inext",
+        "mainAxisSize([\"Negative BobRegressionTest')\")(...describe hisprotoimpl",
+        "mainAxisSize([\"Negative BobRegressionTest')\")(...describe hisprotoimpl",
+        "mainAxisSize([\"Negative BobRegressionTest')\")(...describe hisprotoimpl",
+        "mainAxisSize([\"Negative BobRegressionTest')\")(...describe hisprotoimpl",
+        "mainAxisSize([\"Negative BobRegressionTest')\")(...describe hisprotoimpl",
+        "mainAxisSize([\"Negative BobRegressionTest')\")(...describe hisprotoimpl",
+        "calaure LUT snippetHide([\"Negative Bob:+: \"\"))(...describe his//~",
+        "HasIndex LUT snippetHide([\"Negative Bob:+:})$.(...describe his<_>"
+    ],
+    "losses": [
+        1000000.0,
+        124.700927734375,
+        55.94329833984375,
+        10.75738525390625,
+        1.9833984375,
+        0.08868408203125,
+        0.08868408203125,
+        0.013427734375,
+        -0.07122802734375,
+        -0.07122802734375,
+        -0.106201171875,
+        -0.12744140625,
+        -0.18377685546875,
+        -0.1856689453125,
+        -0.1942138671875,
+        -0.19635009765625,
+        -0.2086181640625,
+        -0.2086181640625,
+        -0.22113037109375,
+        -0.23504638671875,
+        -0.23504638671875,
+        -0.23504638671875,
+        -0.23504638671875,
+        -0.23504638671875,
+        -0.23504638671875,
+        -0.23504638671875,
+        1000000.0,
+        107.24212646484375,
+        39.505859375,
+        13.80462646484375,
+        3.162109375,
+        0.469482421875,
+        0.2548828125,
+        0.2548828125,
+        0.2548828125,
+        0.2548828125,
+        0.01165771484375,
+        -0.09185791015625,
+        -0.212890625,
+        -0.24566650390625,
+        -0.24566650390625,
+        -0.24566650390625,
+        -0.24566650390625,
+        -0.24566650390625,
+        -0.24566650390625,
+        -0.24566650390625,
+        -0.25689697265625,
+        -0.26580810546875,
+        -0.2713623046875,
+        -0.27252197265625,
+        -0.27252197265625,
+        -0.27252197265625,
+        1000000.0,
+        49.47991943359375,
+        11.2344970703125,
+        1.35760498046875,
+        0.03009033203125,
+        -0.01092529296875,
+        -0.0560302734375,
+        -0.20074462890625,
+        -0.20074462890625,
+        -0.20074462890625,
+        -0.20074462890625,
+        -0.23944091796875,
+        -0.23944091796875,
+        -0.24395751953125,
+        -0.24395751953125,
+        -0.24395751953125,
+        -0.24395751953125,
+        -0.24395751953125,
+        -0.26025390625,
+        -0.2657470703125,
+        -0.2657470703125,
+        -0.26995849609375,
+        -0.27215576171875,
+        -0.28204345703125,
+        -0.2918701171875,
+        -0.2918701171875,
+        1000000.0,
+        4.34503173828125,
+        0.882568359375,
+        -0.02801513671875,
+        -0.18280029296875,
+        -0.2222900390625,
+        -0.2222900390625,
+        -0.2222900390625,
+        -0.2222900390625,
+        -0.2222900390625,
+        -0.2222900390625,
+        -0.2222900390625,
+        -0.2222900390625,
+        -0.2222900390625,
+        -0.22344970703125,
+        -0.23846435546875,
+        -0.2559814453125,
+        -0.326171875,
+        -0.34857177734375,
+        -0.34857177734375,
+        -0.34857177734375,
+        -0.34857177734375,
+        -0.34857177734375,
+        -0.34857177734375,
+        -0.351104736328125,
+        -0.3555908203125
+    ],
+    "runtimes": [
+        0.0,
+        6.475553512573242,
+        6.436167478561401,
+        6.447962999343872,
+        6.456280708312988,
+        6.477537393569946,
+        6.463988542556763,
+        6.484741449356079,
+        6.473039865493774,
+        6.472826242446899,
+        6.453598260879517,
+        6.4567859172821045,
+        6.48250675201416,
+        6.4515345096588135,
+        6.444437742233276,
+        6.454586744308472,
+        6.462406873703003,
+        6.4650702476501465,
+        6.473768711090088,
+        6.489187002182007,
+        6.449869632720947,
+        6.4848473072052,
+        6.416929483413696,
+        6.399255037307739,
+        6.4724812507629395,
+        6.405709266662598,
+        0.0,
+        6.457258224487305,
+        6.450193881988525,
+        6.468984842300415,
+        6.478633880615234,
+        6.476633310317993,
+        6.46693754196167,
+        6.471371173858643,
+        6.451486349105835,
+        6.463620662689209,
+        6.475609302520752,
+        6.4367170333862305,
+        6.4597861766815186,
+        6.47840428352356,
+        6.458523273468018,
+        6.4718241691589355,
+        6.459262371063232,
+        6.444454669952393,
+        6.444485902786255,
+        6.420666933059692,
+        6.481461048126221,
+        6.448639631271362,
+        6.450652122497559,
+        6.479029655456543,
+        6.471160650253296,
+        6.393718481063843,
+        0.0,
+        6.467257261276245,
+        6.4600300788879395,
+        6.486410617828369,
+        6.532231330871582,
+        6.426540374755859,
+        6.480638027191162,
+        6.460792541503906,
+        6.440991163253784,
+        6.435598373413086,
+        6.475342750549316,
+        6.45973539352417,
+        6.496796369552612,
+        6.472099304199219,
+        6.427894830703735,
+        6.434668779373169,
+        7.064460277557373,
+        6.830740451812744,
+        6.880429744720459,
+        6.8611814975738525,
+        6.80527925491333,
+        6.7218639850616455,
+        6.637098789215088,
+        6.7105889320373535,
+        6.6315648555755615,
+        6.553183317184448,
+        0.0,
+        6.760766506195068,
+        6.682657241821289,
+        6.860641241073608,
+        6.980457067489624,
+        6.653620004653931,
+        6.7565953731536865,
+        6.727290391921997,
+        6.67951226234436,
+        6.691668510437012,
+        6.8749916553497314,
+        6.725444078445435,
+        6.7112298011779785,
+        6.660985708236694,
+        6.64056396484375,
+        6.683420896530151,
+        6.767950057983398,
+        6.778345823287964,
+        6.680100202560425,
+        7.027110815048218,
+        7.1786274909973145,
+        7.169647932052612,
+        7.294204473495483,
+        7.280618906021118,
+        7.301920652389526,
+        7.266782999038696
+    ],
+    "tests": [
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    0,
+                    19.875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                19.875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    0,
+                    5.0
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                5.0,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    0,
+                    4.5
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                4.5,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    0,
+                    1.296875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                1.296875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.3125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.3125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.06787109375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.06787109375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.06787109375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.06787109375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0693359375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0693359375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.06494140625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.06494140625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.06494140625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.06494140625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.062255859375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.062255859375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.06494140625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.06494140625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.04296875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.04296875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.042236328125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.042236328125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0281982421875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0281982421875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.031982421875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.031982421875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.040283203125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.040283203125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.040283203125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.040283203125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.032958984375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.032958984375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.032958984375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.032958984375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.032958984375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.032958984375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.032958984375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.032958984375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.032958984375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.032958984375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.032958984375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.032958984375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.032958984375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.032958984375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The movie was a waste of my time .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.032958984375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.032958984375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    0,
+                    21.125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                21.125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    0,
+                    3.875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                3.875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    3.1875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                3.1875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    0,
+                    1.6875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                1.6875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.51171875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.51171875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.130859375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.130859375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.1015625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.1015625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.1015625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.1015625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.1015625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.1015625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.1015625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.1015625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.09814453125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.09814453125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.05859375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.05859375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0206298828125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0206298828125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01544189453125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01544189453125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01544189453125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01544189453125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01544189453125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01544189453125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01544189453125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01544189453125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01544189453125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01544189453125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01544189453125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01544189453125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01544189453125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01544189453125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01129150390625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01129150390625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00604248046875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00604248046875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00811767578125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00811767578125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.010009765625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.010009765625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.010009765625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.010009765625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The hotel was dirty and the staff was rude .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.010009765625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.010009765625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    0,
+                    21.75
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                21.75,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    0,
+                    1.890625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                1.890625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    0,
+                    0.921875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.921875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.193359375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.193359375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0458984375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0458984375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.045654296875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.045654296875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.046630859375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.046630859375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0159912109375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0159912109375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0159912109375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0159912109375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0159912109375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0159912109375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0159912109375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0159912109375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0089111328125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0089111328125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0089111328125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0089111328125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.011962890625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.011962890625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.011962890625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.011962890625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.011962890625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.011962890625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.011962890625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.011962890625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.011962890625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.011962890625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.031005859375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.031005859375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0264892578125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0264892578125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0264892578125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0264892578125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.010009765625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.010009765625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.007415771484375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.007415771484375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0439453125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0439453125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.050048828125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.050048828125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The room was dirty and the service was terrible .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.050048828125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.050048828125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    0,
+                    23.75
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                23.75,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.1748046875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.1748046875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0703125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0703125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0284423828125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0284423828125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01031494140625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01031494140625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00848388671875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00848388671875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00848388671875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00848388671875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00848388671875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00848388671875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00848388671875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00848388671875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00848388671875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00848388671875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00848388671875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00848388671875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00848388671875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00848388671875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00848388671875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00848388671875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00848388671875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00848388671875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.025146484375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.025146484375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.03173828125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.03173828125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.0286865234375
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.0286865234375,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01055908203125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01055908203125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01031494140625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01031494140625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01031494140625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01031494140625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01031494140625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01031494140625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01031494140625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01031494140625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01031494140625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01031494140625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01031494140625
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01031494140625,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.00714111328125
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.00714111328125,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "The play was boring and I left at the intermission .": [
+                [
+                    "/home/dataset/2024_zox_llm/code/AttnGCG/model/LLM-Research/gemma-7b-it",
+                    1,
+                    1,
+                    0.01043701171875
+                ]
+            ],
+            "n_passed": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_em": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "n_loss": [
+                0.01043701171875,
+                0,
+                0,
+                0
+            ],
+            "total": [
+                1,
+                0,
+                0,
+                0
+            ]
+        }
+    ]
+}
